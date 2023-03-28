@@ -17,10 +17,12 @@ local on_attach = function(client, bufnr)
     -- Mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     local bufopts = { noremap=true, silent=true, buffer=bufnr }
-    set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-    set('n', 'gd', vim.lsp.buf.definition, bufopts)
+    local builtin = require('telescope.builtin')
+    set('n', 'gD', builtin.lsp_type_definitions, bufopts)
+    set('n', 'gd', builtin.lsp_definitions, bufopts)
+    set('n', 'gi', builtin.lsp_implementations, bufopts)
+    set('n', 'gr', builtin.lsp_references, bufopts)
     set('n', 'K', vim.lsp.buf.hover, bufopts)
-    set('n', 'gi', vim.lsp.buf.implementation, bufopts)
     set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
     --set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, bufopts)
     --set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
@@ -30,16 +32,20 @@ local on_attach = function(client, bufnr)
     --set('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
     set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
     set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
-    set('n', 'gr', vim.lsp.buf.references, bufopts)
-    set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+    --set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 
     vim.cmd [[ :au BufWritePre * lua vim.lsp.buf.format { async = false } ]]
 
 
 end
 
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
 config.rust_analyzer.setup {
     on_attach = on_attach,
+}
 
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
+config.tsserver.setup {
+    on_attach = on_attach,
 }
 
