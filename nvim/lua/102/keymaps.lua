@@ -22,6 +22,7 @@ set('n', '<leader>fg', builtin.live_grep, {})
 set('n', '<leader>fb', builtin.buffers, {})
 set('n', '<leader>fh', builtin.help_tags, {})
 set('n', '<leader>fd', builtin.diagnostics, {})
+set('n', '<leader>fj', builtin.jumplist, {})
 
 -- Copilot
 --set('n', '<leader>cp', '<Cmd>Copilot panel<CR>', opts)
