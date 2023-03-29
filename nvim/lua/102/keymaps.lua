@@ -3,8 +3,8 @@ local set = vim.keymap.set
 vim.g.mapleader = ' '
 set('n', '<space>', '<nop>')
 
--- Close tabs
-set('n', '<c-w>', ':bdelete<cr>', {silent=true})
+-- Close tabs. Disabled because it breaks splitting windows
+-- set('n', '<c-w>', ':bdelete<cr>', {silent=true})
 
 -- Better moves
 set('n', '<leader>ex', vim.cmd.Ex)
@@ -17,7 +17,7 @@ set('n', '<c-s>', ':w<cr>')
 -- Telescope
 local builtin = require('telescope.builtin')
 set('n', '<leader>ff', builtin.git_files, {})
-set('n', '<header>fa', builtin.find_files, {})
+set('n', '<leader>fa', builtin.find_files, {})
 set('n', '<leader>fg', builtin.live_grep, {})
 set('n', '<leader>fb', builtin.buffers, {})
 set('n', '<leader>fh', builtin.help_tags, {})

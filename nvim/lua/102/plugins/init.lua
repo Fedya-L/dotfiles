@@ -1,6 +1,5 @@
 require('packer').startup {
     function(use)
-
         use 'wbthomason/packer.nvim'
 
         use {
@@ -10,7 +9,7 @@ require('packer').startup {
 
         use {
             'nvim-telescope/telescope.nvim', tag = '0.1.1',
-            requires = { {'nvim-lua/plenary.nvim'} }
+            requires = { { 'nvim-lua/plenary.nvim' } }
         }
 
         use 'neovim/nvim-lspconfig'
@@ -29,7 +28,7 @@ require('packer').startup {
             after = { 'hrsh7th/nvim-cmp' },
             requires = { 'hrsh7th/nvim-cmp' },
         }
-        
+
         use 'github/copilot.vim'
 
         use 'Mofiqul/dracula.nvim'
@@ -46,15 +45,16 @@ require('packer').startup {
 
         use 'nvim-treesitter/nvim-treesitter-context'
 
-        if packer_bootstrap then
-            require('packer').sync()
-        end
-end
+        use {
+            "williamboman/mason.nvim",
+            "williamboman/mason-lspconfig.nvim",
+        }
+    end
 }
 
 require('102.plugins.treesitter')
+require('102.plugins.mason')
 require('102.plugins.lspconfig')
 require('102.plugins.completion')
 require('102.plugins.noice')
-vim.cmd[[colorscheme dracula]]
-
+vim.cmd [[colorscheme dracula]]
