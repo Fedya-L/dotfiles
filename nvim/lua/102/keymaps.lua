@@ -32,3 +32,6 @@ set('i', '<C-l>', "copilot#Accept()", { expr = true, noremap = true, silent = tr
 -- Floaterm
 set('n', '<leader>ft', '<Cmd>FloatermToggle<CR>')
 set('t', '<leader>ft', '<C-\\><C-n><Cmd>FloatermToggle<CR>')
+
+-- Nvim-tree
+set('n', '<C-f>', '<Cmd>NvimTreeToggle<CR>')
