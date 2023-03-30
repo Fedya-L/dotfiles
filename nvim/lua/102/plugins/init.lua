@@ -53,6 +53,8 @@ require('packer').startup {
         use 'lewis6991/gitsigns.nvim'
 
         use 'nvim-tree/nvim-tree.lua'
+
+        use 'ThePrimeagen/vim-be-good'
     end
 }
 
