@@ -49,6 +49,10 @@ require('packer').startup {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
         }
+
+        use {
+            'lewis6991/gitsigns.nvim',
+        }
     end
 }
 
@@ -57,4 +61,5 @@ require('102.plugins.mason')
 require('102.plugins.lspconfig')
 require('102.plugins.completion')
 require('102.plugins.noice')
+require('102.plugins.gitsings')
 vim.cmd [[colorscheme dracula]]
