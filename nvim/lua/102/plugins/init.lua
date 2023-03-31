@@ -57,6 +57,8 @@ require('packer').startup {
         use 'ThePrimeagen/vim-be-good'
 
         use 'jose-elias-alvarez/null-ls.nvim'
+
+        use 'windwp/nvim-autopairs'
     end
 }
 
@@ -68,4 +70,5 @@ require('102.plugins.noice')
 require('102.plugins.gitsings')
 require('102.plugins.nvim-tree')
 require('102.plugins.null-ls')
+require('102.plugins.autopairs')
 vim.cmd [[colorscheme dracula]]
