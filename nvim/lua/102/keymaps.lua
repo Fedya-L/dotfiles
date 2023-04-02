@@ -36,3 +36,6 @@ set('t', '<leader>ft', '<C-\\><C-n><Cmd>FloatermToggle<CR>')
 -- Nvim-tree
 set('n', '<leader>tt', '<Cmd>NvimTreeToggle<CR>')
 set('n', '<leader>tf', '<Cmd>NvimTreeFindFile<CR>')
+
+-- Just because
+set('n', 'ffs', '$a;<esc>')

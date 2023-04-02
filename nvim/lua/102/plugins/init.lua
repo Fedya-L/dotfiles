@@ -59,7 +59,12 @@ require('packer').startup {
         use 'jose-elias-alvarez/null-ls.nvim'
 
         use 'windwp/nvim-autopairs'
-    end
+    end,
+    config = {
+        display = {
+            open_fn = require('packer.util').float,
+        }
+    }
 }
 
 require('102.plugins.treesitter')
