@@ -8,7 +8,6 @@ set('n', '<space>', '<nop>')
 
 -- Better moves
 set('n', '<leader>ex', vim.cmd.Ex)
-set('i', 'jk', '<esc>')
 
 -- Save using CTRL + s
 set('i', '<c-s>', '<esc>:w<cr>a')
