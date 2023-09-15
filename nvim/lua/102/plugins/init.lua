@@ -29,7 +29,7 @@ require('packer').startup {
             requires = { 'hrsh7th/nvim-cmp' },
         }
 
-        use 'github/copilot.vim'
+        --use 'github/copilot.vim'
 
         use 'Mofiqul/dracula.nvim'
 
