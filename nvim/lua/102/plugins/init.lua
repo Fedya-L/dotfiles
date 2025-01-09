@@ -8,7 +8,7 @@ require('packer').startup {
         }
 
         use {
-            'nvim-telescope/telescope.nvim', tag = '0.1.1',
+            'nvim-telescope/telescope.nvim', tag = '0.1.8',
             requires = { { 'nvim-lua/plenary.nvim' } }
         }
 
@@ -31,7 +31,7 @@ require('packer').startup {
 
         --use 'github/copilot.vim'
 
-        use 'Mofiqul/dracula.nvim'
+        -- use 'Mofiqul/dracula.nvim'
 
         use 'voldikss/vim-floaterm'
 
@@ -39,7 +39,7 @@ require('packer').startup {
             "folke/noice.nvim",
             requires = {
                 "MunifTanjim/nui.nvim",
-                "rcarriga/nvim-notify",
+                -- "rcarriga/nvim-notify",
             }
         }
 
@@ -76,4 +76,4 @@ require('102.plugins.gitsings')
 require('102.plugins.nvim-tree')
 require('102.plugins.null-ls')
 require('102.plugins.autopairs')
-vim.cmd [[colorscheme dracula]]
+-- vim.cmd [[colorscheme dracula]]

@@ -43,7 +43,7 @@ config.rust_analyzer.setup {
 }
 
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
-config.tsserver.setup {
+config.ts_ls.setup {
     on_attach = on_attach,
 }
 
