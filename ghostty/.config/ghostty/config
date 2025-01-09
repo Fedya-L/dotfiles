@@ -1,4 +1,7 @@
 theme = heeler
 background-opacity = 0.99
 background-blur-radius = 20
-
+macos-icon = custom-style
+macos-icon-frame = beige
+macos-icon-ghost-color = ff00ff
+macos-icon-screen-color = 00ff00
