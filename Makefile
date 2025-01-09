@@ -1,3 +1,3 @@
 stow:
-	stow -t $(HOME) -S nix ghostty
+	stow -t $(HOME) -S nix ghostty vim
 
