@@ -1,3 +1,3 @@
 stow:
-	stow -t $(HOME) -S nix
+	stow -t $(HOME) -S nix ghostty
 
