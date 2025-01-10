@@ -1,5 +1,7 @@
 " Keymaps
 inoremap jk <Esc>
+nnoremap q <Nop<D-s>
+let mapleader = " "
 
 " Options
 set number
