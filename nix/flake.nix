@@ -27,12 +27,13 @@
             lua-language-server
             nixd
         ];
-      
+
       homebrew = {
           enable = true;
           brews = [
             "mas"
             "nvm"
+            "clang-format"
           ];
           casks = [
             "ghostty"
