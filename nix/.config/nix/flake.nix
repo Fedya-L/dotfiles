@@ -13,24 +13,43 @@
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
-      environment.systemPackages =
+      environment.systemPackages = with pkgs;
         [
-            pkgs.vim 
-            pkgs.neovim
-            pkgs.yazi
-            pkgs.zoxide
-            pkgs.fzf
-            pkgs.ripgrep
-            pkgs.jq
-            pkgs.fd
-            pkgs.stow
+            vim 
+            neovim
+            yazi
+            zoxide
+            fzf
+            ripgrep
+            jq
+            fd
+            stow
+            lua-language-server
+            nixd
         ];
       
       homebrew = {
           enable = true;
+          brews = [
+            "mas"
+            "nvm"
+          ];
           casks = [
             "ghostty"
+            "phpstorm"
+            "webstorm"
+            "sourcetree"
+            "obsidian"
+            "docker"
+            "pycharm-ce"
+            "rectangle"
+            "raycast"
           ];
+          masApps = { 
+              "Xcode" = 497799835;
+              "Affinity Photo" = 1616822987;
+              "Affinity Designer" = 1616831348;
+          };
           # onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
           onActivation.upgrade = true;
