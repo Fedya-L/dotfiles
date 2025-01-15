@@ -1,7 +1,10 @@
-theme = 0x96f
-background-opacity = 0.99
+theme = "FirefoxDev"
+background-opacity = 0.95
 background-blur-radius = 20
 macos-icon = custom-style
-macos-icon-frame = beige
-macos-icon-ghost-color = ff00ff
-macos-icon-screen-color = 00ff00
+macos-icon-frame = plastic
+macos-icon-ghost-color = 000000
+macos-icon-screen-color = 000000
+
+macos-titlebar-style = tabs
+
