@@ -10,5 +10,5 @@ Reinstalled homebrew. Solved the first problem, but still getting API rale limit
 
 Used phone network instead, managed to more forward. But, homebrew is now an issue again.
 
-Looking redoing `flake.nix`.
+Looking into redoing `flake.nix`. Probably better left for another day.
 
