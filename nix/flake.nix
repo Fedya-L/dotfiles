@@ -1,18 +1,24 @@
 {
-  description = "Example nix-darwin system flake";
+  description = "Work in progress nix-darwin system flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    homebrew-core = {
+      url = "github:homebrew/homebrew-core";
+      flake = false;
+    };
+    homebrew-cask = {
+      url = "github:homebrew/homebrew-cask";
+      flake = false;
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nix-homebrew, nixpkgs }:
+  outputs = inputs@{ self, nix-darwin, nix-homebrew, homebrew-core, homebrew-cask, nixpkgs }:
   let
     configuration = { pkgs, ... }: {
-      # List packages installed in system profile. To search by name, run:
-      # $ nix-env -qaP | grep wget
       environment.systemPackages = with pkgs;
         [
             vim 
@@ -26,6 +32,8 @@
             stow
             lua-language-server
             nixd
+            git
+            uv
         ];
 
       homebrew = {
@@ -35,23 +43,29 @@
             "nvm"
             "clang-format"
           ];
+
           casks = [
             "ghostty"
             "phpstorm"
             "webstorm"
+            "clion"
             "sourcetree"
             "obsidian"
             "docker"
             "pycharm-ce"
             "rectangle"
             "raycast"
+            "numi"
+            "cursor"
           ];
+
           masApps = { 
               "Xcode" = 497799835;
               "Affinity Photo" = 1616822987;
               "Affinity Designer" = 1616831348;
           };
-          # onActivation.cleanup = "zap";
+
+          onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
           onActivation.upgrade = true;
       };
@@ -94,8 +108,10 @@
             # User owning the Homebrew prefix
             user = "fl";
 
-            # Automatically migrate existing Homebrew installations
-            autoMigrate = true;
+            taps = {
+              "homebrew/homebrew-core" = homebrew-core;
+              "homebrew/homebrew-cask" = homebrew-cask;
+            };
           };
         }
       ];

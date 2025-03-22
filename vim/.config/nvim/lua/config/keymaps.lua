@@ -12,3 +12,12 @@ set('n', '<leader>fb', builtin.buffers, {})
 set('n', '<leader>fh', builtin.help_tags, {})
 set('n', '<leader>fd', builtin.diagnostics, {})
 set('n', '<leader>fj', builtin.jumplist, {})
+
+local opts = { noremap = true, silent = true } -- Default options for keymaps
+
+-- Key mappings for LSP-related Telescope functions
+set('n', 'gD', builtin.lsp_type_definitions, opts)
+set('n', 'gd', builtin.lsp_definitions, opts)
+set('n', 'gi', builtin.lsp_implementations, opts)
+set('n', 'gr', builtin.lsp_references, opts)
+set('n', 'K', vim.lsp.buf.hover, opts) 
