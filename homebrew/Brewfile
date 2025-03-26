@@ -1,0 +1,30 @@
+# Brews
+brew "mas"
+brew "nvm"
+brew "vim"
+brew "neovim"
+brew "yazi"
+brew "zoxide"
+brew "fzf"
+brew "ripgrep"
+brew "jq"
+brew "fd"
+brew "stow"
+brew "git"
+
+# Casks
+cask "phpstorm"
+cask "webstorm"
+cask "pycharm-ce"
+cask "numi"
+cask "ghostty"
+cask "docker"
+cask "sourcetree"
+cask "obsidian"
+cask "rectangle"
+cask "raycast"
+
+# Mac App Store apps
+mas "Xcode", id: 497799835
+mas "Affinity Photo", id: 1616822987
+mas "Affinity Designer", id: 1616831348

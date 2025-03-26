@@ -1,11 +1,21 @@
 # Quick Start
 
+1. Install Homebrew
+
+- [ ] Add link to documentation
+
+2. Run `make brew`
+```shell
+make brew
 ```
+
+3. Run `make stow`
+```shell
 make stow
 ```
 
+
 # Todo
 
-- [ ] Redo `flake.nix`.
-- [ ] Remove `nvim` directory.
-- 
+- [ ] Better documentation
+- [ ] Configure Rectangle using `defaults`

@@ -1,4 +1,4 @@
-theme = "FirefoxDev"
+theme = "Adwaita Dark"
 background-opacity = 0.95
 background-blur-radius = 20
 macos-icon = custom-style

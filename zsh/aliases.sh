@@ -15,15 +15,9 @@ function y() {
 }
 
 alias cd='gord443'
-alias vim='nvim'
-alias vi='nvim'
-alias e='nvim'
 alias pip='pip3'
 alias python='python3'
 
 alias pyc='open -a pycharm\ ce'
 alias pstorm='open -a phpstorm'
 alias wstorm='open -a webstorm'
-
-export EDITOR=nvim
-
