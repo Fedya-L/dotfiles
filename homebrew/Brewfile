@@ -23,6 +23,7 @@ cask "sourcetree"
 cask "obsidian"
 cask "rectangle"
 cask "raycast"
+cask "mouseless"
 
 # Mac App Store apps
 mas "Xcode", id: 497799835
